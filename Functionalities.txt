@@ -1,0 +1,6 @@
+The IIIT Hyderabad image present at the top right corner should be given a hyperlink.
+In all the pages the Navbar should appear where the active pages should be
+when navigating to experiment page it should appear with a dropdown menu.
+Now we select a language from dropdown menu.
+On selecting the language then a jumbled sentence should appear.
+Display answer button on click and correct answer is to be shown.
