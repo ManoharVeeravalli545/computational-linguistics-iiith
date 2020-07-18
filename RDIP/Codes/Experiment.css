@@ -1,0 +1,47 @@
+#sel {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 230px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#val {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+}
+#play{
+    position: absolute;
+    width: 1000px;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    color: purple;
+    
+}
+#play1{
+    position: absolute;
+    width: 1000px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-style: bold;
+    color:#800080;
+    
+}
+
+h1 {
+    margin: 250px 308px;
+    font = "italic bold 20px arial,serif"
+}
