@@ -1,11 +1,10 @@
 var sel = document.getElementById("sel");
-
 myfunction = function () {
 
     if (sel.value === "english") {
 
 
-var Sentence1 = ['John ate an apple before afternoon',
+		var Sentence1 = ['John ate an apple before afternoon',
                     'before afternoon John ate an apple',
                     'John before afternoon ate an apple'
                 ];
@@ -14,7 +13,7 @@ var Sentence1 = ['John ate an apple before afternoon',
                 ];
                 var Sentence3 = ['John and Mary went to church',
                     'Mary and John went to church'
-                ];
+                 ];
                 var Sentence4 = ['John went to church after eating',
                     'after eating John went to church',
                     'John after eating went to church'
@@ -57,33 +56,30 @@ var Sentence1 = ['John ate an apple before afternoon',
 
                 
 
-                var erandom = earray[Math.floor(Math.random() * earray.length)]
 
-
-
-
-
-
-
-        document.getElementById("play1").innerHTML = "(select the buttons in proper order)"
+   	document.getElementById("play1").innerHTML = "(select the buttons in proper order)"
         document.getElementById("play").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+  
+        var rwords = Math.floor(Math.random()*earray.length)
+	document.getElementById("play2").innerHTML = ""
+	document.getElementById("play3").innerHTML = ""
+	$("#hide").hide()
 
-    
-        var rwords = erandom[Math.floor(Math.random())]
+	var changeWords = Math.floor(Math.random() * earray.length);
+	var gettingValue = earray[changeWords][0];
+    var k = rvalue(gettingValue);
+    var m = "";
+    var n = "";
+    for (i = 0; i <= k.length - 1; i++) {
+        val = k[i];
+        m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+        n += m;
+    }
+    document.getElementById("value").innerHTML = n 
 
-        
-        document.getElementById("value").innerHTML = rwords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
 
-       
-
-        var j = $("p").first().text().split(/\s+/);
-        var text = j.join("</button> <button>");
-        $("p").first().html("<button>" + text + "</button>");
-        $("button").css({"font-size":"25px","padding":"10px","margin-right":"5px"});
 
     }
-
-    // For Hindi language
 
     else if (sel.value === "hindi") {
 
@@ -142,31 +138,68 @@ var Sentence1 = ['John ate an apple before afternoon',
             'है वहाँ बड़ी सी एक किताब'
         ];
 
-        var hindiArray = [firstHindiSentence, secondHindiSentence, thirdHindiSentence, fourthHindiSentence,
+        var harray = [firstHindiSentence, secondHindiSentence, thirdHindiSentence, fourthHindiSentence,
             fifthHindiSentence, sixHindiSentence, seventhHindiSentence];
 
-
-        var hndRandom = hindiArray[Math.floor(Math.random() * hindiArray.length)]
 
 
         document.getElementById("play1").innerHTML = "(select the buttons in proper order)"
         document.getElementById("play").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
 
 
-        var rwords = hndRandom[Math.floor(Math.random())]
+        var rwords = Math.floor(Math.random()*harray.length)
 
-        document.getElementById("value").innerHTML = rwords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
+	document.getElementById("play2").innerHTML = ""
+	document.getElementById("play3").innerHTML = ""
+	$("#hide").hide()
 
-        var j = $("p").first().text().split(/\s+/);
-        var text = j.join("</button> <button>");
-        $("p").first().html("<button>" + text + "</button>");
-        $("button").css({"font-size":"25px","padding":"10px","margin-right":"5px"});
 
+
+	var changeWords = Math.floor(Math.random() * harray.length);
+	var gettingValue = harray[changeWords][0];
+    var k = rvalue(gettingValue);
+    var m = "";
+    var n = "";
+    for (i = 0; i <= k.length - 1; i++) {
+        val = k[i];
+        m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+        n += m;
+    }
+    document.getElementById("value").innerHTML = n 
 
     } else {
         document.getElementById("play1").innerHTML = ""
         document.getElementById("play").innerHTML = ""
+ 	document.getElementById("play2").innerHTML = ""
+   	document.getElementById("play3").innerHTML = ""
         document.getElementById("value").innerHTML = ""
+	
         alert("select any language")
     }
 }
+
+
+
+$("#hide").hide()
+function rvalue(data) {
+    var combine = data.split(" ");
+    var i = combine.length, temp, startvalue;
+    while (0 !== i) {
+        startvalue = Math.floor(Math.random() * i);
+        i --;
+        temp = combine[i];
+        combine[i] = combine[startvalue];
+        combine[startvalue] = temp;
+    }
+    return combine;
+}
+var displayingvalue = "";
+function buttonDisplay(id, value) {
+    document.getElementById("play2").innerHTML = "Formed Sentence (after selecting words):";
+    displayingvalue += value + " ";
+    document.getElementById("play3").innerHTML = displayingvalue;
+    $("#hide").show()
+    document.getElementById(id).style.display = "none";
+}
+
+

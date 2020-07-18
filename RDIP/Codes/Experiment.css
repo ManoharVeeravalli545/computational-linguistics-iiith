@@ -26,7 +26,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 23px;
-    color: purple;
+    color:#800080;
     
 }
 #play1{
@@ -35,10 +35,35 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 25px;
+    font-size: 23px;
     font-style: bold;
     color:#800080;
     
+}
+#play2
+{
+    font-size: 23px;
+    font-style: bold;
+    position: absolute;
+    width: 1000px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    
+    color:#800080;
+}
+#play3
+{
+    position: absolute;
+    width: 1000px;
+    top: 90%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-style: bold;
+    color:#800080;
+
 }
 
 h1 {
