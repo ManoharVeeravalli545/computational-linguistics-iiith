@@ -1,4 +1,58 @@
 var sel = document.getElementById("sel");
+var displayingvalue = "";
+var k,new,start;
+
+
+$("#hide").hide()
+$("#correctsentence").hide()
+
+
+function buttonDisplay(id, value) {
+    document.getElementById("play2").innerHTML = "Formed Sentence (after selecting words):";
+    displayingvalue += value + " ";
+    document.getElementById("play3").innerHTML = displayingvalue;
+    $("#hide").show()
+    document.getElementById(id).style.display = "none";
+    start++;
+if(new == start)
+{
+$("#correctsentence").show()
+}
+}
+
+function rvalue(data) {
+    var combine = data.split(" ");
+    var i = combine.length, temp, startvalue;
+    while (0 !== i) {
+        startvalue = Math.floor(Math.random() * i);
+        i --;
+        temp = combine[i];
+        combine[i] = combine[startvalue];
+        combine[startvalue] = temp;
+    }
+    return combine;
+}
+
+function reform()
+{
+displayingvalue= " "
+document.getElementById("play2").innerHTML =""
+document.getElementById("play3").innerHTML = displayingValue;
+for(var i=0;i <= 10;i++)
+{
+document.getElementById('button1'+i).style.display= "";
+}
+
+start=0;
+$("#correctsentence").hide()
+}
+
+
+
+
+
+
+
 myfunction = function () {
 
     if (sel.value === "english") {
@@ -60,20 +114,23 @@ myfunction = function () {
    	document.getElementById("play1").innerHTML = "(select the buttons in proper order)"
         document.getElementById("play").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
   
-        var rwords = Math.floor(Math.random()*earray.length)
-	document.getElementById("play2").innerHTML = ""
+var changeWords = Math.floor(Math.random() * earray.length);       
+ document.getElementById("play2").innerHTML = ""
 	document.getElementById("play3").innerHTML = ""
 	$("#hide").hide()
-
-	var changeWords = Math.floor(Math.random() * earray.length);
+	$("#correctsentence").hide()
+	
 	var gettingValue = earray[changeWords][0];
     var k = rvalue(gettingValue);
-    var m = "";
+    new=0;
+    start=0;
+   
     var n = "";
     for (i = 0; i <= k.length - 1; i++) {
         val = k[i];
-        m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+        m = "  <button style= 'font-size:15px ; padding:5px ; margin-right:5px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
         n += m;
+	new++;
     }
     document.getElementById("value").innerHTML = n 
 
@@ -157,13 +214,15 @@ myfunction = function () {
 
 	var changeWords = Math.floor(Math.random() * harray.length);
 	var gettingValue = harray[changeWords][0];
-    var k = rvalue(gettingValue);
-    var m = "";
+     k = rvalue(gettingValue);
+	new=0;
+	start=0;
     var n = "";
     for (i = 0; i <= k.length - 1; i++) {
         val = k[i];
         m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
         n += m;
+	new++;
     }
     document.getElementById("value").innerHTML = n 
 
@@ -173,46 +232,12 @@ myfunction = function () {
  	document.getElementById("play2").innerHTML = ""
    	document.getElementById("play3").innerHTML = ""
         document.getElementById("value").innerHTML = ""
-	
+	$("#hide").hide()
+	$("#correctsentence").hide()
         alert("select any language")
     }
 }
 
 
 
-$("#hide").hide()
-var k;
-var displayingvalue = "";
-function buttonDisplay(id, value) {
-    document.getElementById("play2").innerHTML = "Formed Sentence (after selecting words):";
-    displayingvalue += value + " ";
-    document.getElementById("play3").innerHTML = displayingvalue;
-    $("#hide").show()
-    document.getElementById(id).style.display = "none";
-}
-
-function rvalue(data) {
-    var combine = data.split(" ");
-    var i = combine.length, temp, startvalue;
-    while (0 !== i) {
-        startvalue = Math.floor(Math.random() * i);
-        i --;
-        temp = combine[i];
-        combine[i] = combine[startvalue];
-        combine[startvalue] = temp;
-    }
-    return combine;
-}
-
-function reform()
-{
-displayingvalue= " "
-document.getElementById("play2").innerHTML =""
-document.getElementById("play3").innerHTML = displayingValue;
-for(var i=0;i <= 10;i++)
-{
-document.getElementById('button1'+i).style.display= "";
-}
-$("#hide").hide()
-}
 
