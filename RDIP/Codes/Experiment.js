@@ -181,6 +181,16 @@ myfunction = function () {
 
 
 $("#hide").hide()
+var k;
+var displayingvalue = "";
+function buttonDisplay(id, value) {
+    document.getElementById("play2").innerHTML = "Formed Sentence (after selecting words):";
+    displayingvalue += value + " ";
+    document.getElementById("play3").innerHTML = displayingvalue;
+    $("#hide").show()
+    document.getElementById(id).style.display = "none";
+}
+
 function rvalue(data) {
     var combine = data.split(" ");
     var i = combine.length, temp, startvalue;
@@ -193,13 +203,16 @@ function rvalue(data) {
     }
     return combine;
 }
-var displayingvalue = "";
-function buttonDisplay(id, value) {
-    document.getElementById("play2").innerHTML = "Formed Sentence (after selecting words):";
-    displayingvalue += value + " ";
-    document.getElementById("play3").innerHTML = displayingvalue;
-    $("#hide").show()
-    document.getElementById(id).style.display = "none";
-}
 
+function reform()
+{
+displayingvalue= " "
+document.getElementById("play2").innerHTML =""
+document.getElementById("play3").innerHTML = displayingValue;
+for(var i=0;i <= 10;i++)
+{
+document.getElementById('button1'+i).style.display= "";
+}
+$("#hide").hide()
+}
 
