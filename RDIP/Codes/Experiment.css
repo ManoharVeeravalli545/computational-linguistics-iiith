@@ -85,6 +85,7 @@
     font-size: 23px;
     font-style: bold;
     color:#800080;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 #hide
@@ -108,7 +109,7 @@
     top: 60%;
     left: 65%;
     transform: translate(-50%, -50%);
-    font-size: 15px;
+    font-size: 16px;
     font-style: bold;
     
 
@@ -118,10 +119,10 @@
     position: absolute;
     width: 200px;
     height:50px;
-    top: 80%;
+    top: 85%;
     left: 80%;
     transform: translate(-50%, -50%);
-    font-size: 15px;
+    font-size: 16px;
     font-style: bold;
 }
 
@@ -136,6 +137,7 @@
     font-size: 23px;
     font-style: bold;
     color:#800080;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
