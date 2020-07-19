@@ -1,19 +1,19 @@
 #sel {
-    padding: 3px;
-    border: 2px solid black;
-    border-radius: 6px;
+    padding: 4px;
+    border: 3px solid black;
+    border-radius: 5px;
     width: 230px;
     font-size: 20px;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 
 }
 
-#val {
+#value {
     position: absolute;
-    top: 73%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
@@ -22,7 +22,7 @@
 #play{
     position: absolute;
     width: 1000px;
-    top: 63%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 23px;
@@ -32,7 +32,7 @@
 #play1{
     position: absolute;
     width: 1000px;
-    top: 70%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 23px;
@@ -46,18 +46,91 @@
     font-style: bold;
     position: absolute;
     width: 1000px;
-    top: 85%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
-    
     color:#800080;
 }
 #play3
 {
     position: absolute;
     width: 1000px;
-    top: 90%;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-style: bold;
+    color:#800080;
+
+}
+#play4
+{
+    position: absolute;
+    width: 1000px;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-style: bold;
+    color:#800080;
+
+}
+#play5
+{
+    position: absolute;
+    width: 1000px;
+    top: 65%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-style: bold;
+    color:#800080;
+
+}
+#hide
+{
+    position: absolute;
+    width: 200px;
+    height:50px;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-style: bold;
+    
+
+}
+#correct
+{
+    position: absolute;
+    width: 200px;
+    height:55px;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-style: bold;
+    
+
+}
+#getcorrect
+{
+    position: absolute;
+    width: 200px;
+    height:50px;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-style: bold;
+}
+
+
+#play6
+{
+    position: absolute;
+    width: 1000px;
+    top: 70%;
     left: 60%;
     transform: translate(-50%, -50%);
     font-size: 23px;
@@ -66,7 +139,11 @@
 
 }
 
+
+
+
 h1 {
-    margin: 250px 308px;
+ 
+   
     font = "italic bold 20px arial,serif"
 }

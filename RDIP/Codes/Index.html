@@ -2,33 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Experiment</title>
+    <title>Document</title>
     <link rel="stylesheet" href="Experiment.css">
     <script src="../Libraries/jquery-3.5.1.js"></script>
 </head>
 
 <body>
-<center>
-    <h1>Experiment</h1>
-    <select id="sel" onchange="myfunction();">
-        <option value="default">---Select Language---</option>
-        <option value="english">English</option>
-        <option value="hindi">Hindi</option>
-    </select>
-    <span id="play"></span>
-    
-    <span id="play1"></span>
+    <center>
+        <h1>Experiment</h1>
+        <hr>
+        <select id="sel" onchange="myfunction();">
+            <option value="default">---Select Language---</option>
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+        </select>
+    </center>
+    <span id="play1"></span> 
+    <span id="play"></span> 
     <p id="value"></p>
-     
     <span id = "play2"></span>
     <span id = "play3"></span>
     <span id = "play4"></span>
-   <button id="hide" onclick="reform();">Re-form the sentence</button>
-<button id="correct" onclick="correctsentence();">Check the correctness of sentence</button>
- <button id="getcorrect">GET CORRECT SENTENCE</button>
-
+    <span id = "play5"></span>
+    <span id = "play6"></span>
+    <button id="hide" onclick="reform();">Re-form the sentence</button>
+    <button id="correct" onclick="checktheCorrectsentence();">Check the correctness of this sentence</button>
+    <button id="getcorrect">Get Correct Sentence</button>
     <script src="Experiment.js"></script>
-<center>
 </body>
-
 </html>
