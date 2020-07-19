@@ -1,8 +1,10 @@
 #sel {
+    position: relative;
+    font-family: Arial;
     padding: 4px;
     border: 3px solid black;
     border-radius: 5px;
-    width: 230px;
+    width: 200px;
     font-size: 20px;
     position: absolute;
     top: 20%;
@@ -98,7 +100,15 @@
     transform: translate(-50%, -50%);
     font-size: 15px;
     font-style: bold;
-    
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
 
 }
 #correct
@@ -111,8 +121,15 @@
     transform: translate(-50%, -50%);
     font-size: 16px;
     font-style: bold;
-    
-
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 #getcorrect
 {
@@ -124,6 +141,15 @@
     transform: translate(-50%, -50%);
     font-size: 16px;
     font-style: bold;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 
@@ -141,11 +167,8 @@
 
 }
 
-
-
-
 h1 {
- 
-   
     font = "italic bold 20px arial,serif"
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }

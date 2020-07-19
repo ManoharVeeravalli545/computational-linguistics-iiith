@@ -34,18 +34,18 @@ myfunction = function () {
     if (sel.value === "english") {
 
         var Sentence1 = ['John ate an apple before afternoon',
-                    'before afternoon John ate an apple',
-                    'John before afternoon ate an apple'
+                         'before afternoon John ate an apple',
+                         'John before afternoon ate an apple'
                 ];
                 var Sentence2 = ['some students like to study in the night',
-                    'at night some students like to study'
+                                 'at night some students like to study'
                 ];
                 var Sentence3 = ['John and Mary went to church',
-                    'Mary and John went to church'
+                                 'Mary and John went to church'
                  ];
                 var Sentence4 = ['John went to church after eating',
-                    'after eating John went to church',
-                    'John after eating went to church'
+                                 'after eating John went to church',
+                                'John after eating went to church'
                 ];
                 var Sentence5 = ['did he go to market',
                     'he did go to market'
@@ -426,7 +426,7 @@ hidden = function(){
 }
 changebutton = function(){
     while(document.getElementById("play6").innerHTML ==""){
-        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden()'>Hide the Correct Sentence</button>"
+        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden();'>Hide the Correct Sentence</button>"
         document.getElementById("play6").innerHTML = answer;
     }
 }
@@ -439,14 +439,14 @@ var total,answer;
     document.getElementById("play6").innerHTML = ""
     if(sel.value=='hindi'){
         total = harray[replace].length-1;
-        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden()'></button>"
+        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden();'> Hide the Correct Sentence</button>"
         for(i=0;i<=total;i++){
             answer = answer + harray[replace][i]+"<br/>"
         }
         document.getElementById("play6").innerHTML = answer;
     }else if (sel.value=='english'){
         total = earray[replace].length-1;
-        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden()'></button>"
+        document.getElementById('play5').innerHTML = "<button id='getcorrect' onclick='hidden();'>Hide the Correct Sentence</button>"
         for(i=0;i<=total;i++){
             answer = answer + earray[replace][i]+"<br/>"
         }
